@@ -2,28 +2,40 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ArticleVue {
+   //Dependance 
+     private Validator validator;
+     private Scanner scanner=new Scanner(System.in);
+     private CategorieVue categorieVue;
+    public ArticleVue(){
+      this.validator = new Validator();
+      this.categorieVue = new CategorieVue();
+    }
+
     public  Article saisie() {
-          Scanner scanner=new Scanner(System.in);
+        
           //1-Saisir l'article
           Article article=new Article();
            do {
               System.out.println("Entrer l'id");
               article.setId(scanner.nextInt());
-           } while (article.getId()<=0);
+           } while (!validator.isPositif(article.getId()));
           
            scanner.nextLine();
            do {
               System.out.println("Entrer le Libelle");
               article.setLibelle(scanner.nextLine());
-           } while ( article.getLibelle().equals(""));
-           do {
-           System.out.println("Entrer le prix ");
+            } while ( article.getLibelle().equals(""));
+            do {
+            System.out.println("Entrer le prix ");
            article.setPrix(scanner.nextDouble());
-          } while (article.getPrix()<=0);
-          do {
+           } while (!validator.isPositif(article.getPrix()));
+            do {
              System.out.println("Entrer la qte Stock");
               article.setQteStock(scanner.nextInt());
-            }while (article.getQteStock()<=0);
+            }while (!validator.isPositif(article.getQteStock()));
+            //Saisie Categorie
+             System.out.println("Choisir une Categorie");
+            article.setCategorie(categorieVue.saisie());
             return article;
     } 
 

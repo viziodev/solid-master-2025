@@ -6,7 +6,15 @@ public class Article {
      private String libelle; //Libelle est obligatoire //25*2 =50
      private double prix;  //8octets
      private int qteStock; //4octes
+
+     private CategorieEnum categorie;
      
+    public CategorieEnum getCategorie() {
+        return categorie;
+    }
+    public void setCategorie(CategorieEnum categorie) {
+        this.categorie = categorie;
+    }
     //Methodes
       //1-Constructeur
        //Instanciation d'un objet
@@ -71,12 +79,11 @@ public class Article {
    }
    //Serialisation  convertion   Object ==> Chaine
    //Deserialisation  convertion  Chaine ==>  Object
-    @Override
-    public String toString() {
-        return "Article [id=" + id + ", libelle=" + libelle + ", prix=" + prix + ", qteStock=" + qteStock + "]";
-    }
-
-
+@Override
+public String toString() {
+    return "Article [id=" + id + ", libelle=" + libelle + ", prix=" + prix + ", qteStock=" + qteStock + ", categorie="
+            + categorie + "(" +categorie.getTaxe() +")]";
+}
        //equals ==> Perment de comaprer deux objets(les valeurs) de la classe
 
 

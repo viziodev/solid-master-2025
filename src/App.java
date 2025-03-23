@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.Scanner;
-
 public class App {
     public static void main(String[] args) throws Exception {
          Scanner scanner=new Scanner(System.in);
@@ -11,6 +9,7 @@ public class App {
          do {
             System.out.println("1-Ajouter Article");
             System.out.println("2-Lister les  Articles");
+            
             System.out.println("3-Quitter");
             System.out.println("Faites votre choix");
             choix=scanner.nextInt();
