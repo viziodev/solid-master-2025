@@ -1,4 +1,7 @@
+package views;
 import java.util.Scanner;
+
+import entity.CategorieEnum;
 
 public class CategorieVue {
    private Scanner scanner=new Scanner(System.in);

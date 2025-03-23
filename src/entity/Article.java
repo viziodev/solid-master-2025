@@ -1,4 +1,6 @@
+package entity;
 //Description de Donnees ==>Diagramme Classe
+
 public class Article {
     
     //Attributs ou des caracteristiques

@@ -1,3 +1,4 @@
+package entity;
 public enum CategorieEnum {
     Electronic(1.2), //1.2
     ElectroMenager(1.8); //1.8

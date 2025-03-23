@@ -1,5 +1,9 @@
+package views;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import entity.Article;
+import utils.Validator;
 
 public class ArticleVue {
    //Dependance 
